@@ -45,7 +45,7 @@ const CheckoutPage = () => {
     }
     
     if (!selectedCity) {
-      toast.error("Veuillez sélectionner une ville");
+      toast.error("Veuillez sélectionner laa ville");
       return;
     }
     
