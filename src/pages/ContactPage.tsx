@@ -138,7 +138,7 @@ const ContactPage: React.FC = () => {
           
           <div>
             <div className="bg-gradient-to-br from-blue-600 to-indigo-700 p-8 rounded-lg text-white shadow-lg mb-6 animate-fade-in">
-              <h2 className="text-2xl font-semibold mb-6">Nos coordonnées</h2>
+              <h2 className="text-2xl font-semibold mb-6">lma3lomat</h2>
               
               <div className="space-y-6">
                 <div className="flex items-start transform hover:translate-x-2 transition-transform">
