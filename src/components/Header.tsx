@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
-import { 
-  NavigationMenu, 
-  NavigationMenuList, 
-  NavigationMenuItem, 
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
   NavigationMenuLink,
   navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu';
@@ -22,10 +21,10 @@ const Header: React.FC = () => {
   const { cart, categories } = useStore();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-  
+
   // Calculate total items in cart
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-  
+
   const handleCategoryClick = (categoryName: string) => {
     navigate(`/category/${categoryName}`);
     setIsOpen(false);
@@ -40,7 +39,7 @@ const Header: React.FC = () => {
               Laika
             </Link>
           </div>
-          
+
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -50,7 +49,7 @@ const Header: React.FC = () => {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-              
+
               <NavigationMenuItem>
                 <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
                   <DropdownMenuTrigger asChild>
@@ -59,16 +58,16 @@ const Header: React.FC = () => {
                     </button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="center" className="w-48 p-2">
-                    <DropdownMenuItem 
+                    <DropdownMenuItem
                       className="cursor-pointer font-medium text-red-600 hover:text-red-800"
                       onClick={() => handleCategoryClick('promotions')}
                     >
                       Promotions
                     </DropdownMenuItem>
                     {categories.map(category => (
-                      <DropdownMenuItem 
+                      <DropdownMenuItem
                         key={category.id}
-                        className="cursor-pointer" 
+                        className="cursor-pointer"
                         onClick={() => handleCategoryClick(category.name)}
                       >
                         {category.name}
@@ -77,7 +76,7 @@ const Header: React.FC = () => {
                   </DropdownMenuContent>
                 </DropdownMenu>
               </NavigationMenuItem>
-              
+
               <NavigationMenuItem>
                 <Link to="/about">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -85,7 +84,15 @@ const Header: React.FC = () => {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-              
+
+              <NavigationMenuItem>
+                <Link to="/mehdi">
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    🌟 Mehdi
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <Link to="/contact">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -93,7 +100,7 @@ const Header: React.FC = () => {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-              
+
               <NavigationMenuItem>
                 <Link to="/checkout">
                   <Button variant="outline" className="relative group">
