@@ -94,6 +94,14 @@ const Header: React.FC = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <Link to="/youness">
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    🌟 Youness
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <Link to="/contact">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     <MessageSquare className="mr-2 h-4 w-4" /> Contact
