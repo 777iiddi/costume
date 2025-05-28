@@ -88,7 +88,7 @@ const Header: React.FC = () => {
               <NavigationMenuItem>
                 <Link to="/mehdi">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    🌟 Mehdi
+                     Mehdi
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -96,7 +96,7 @@ const Header: React.FC = () => {
               <NavigationMenuItem>
                 <Link to="/youness">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    🌟 Youness
+                     Youness
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
